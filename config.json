@@ -1,0 +1,16 @@
+{
+    "modules": [
+        "ui/food_delivery/fd_main_navigation",
+        "ui/food_delivery/fd_dashbord",
+        "ui/food_delivery/fd_detail",
+        "ui/food_delivery/fd_track",
+        "ui/emoney/em_dashbord",
+        "ui/travel/tv_dashboard",
+        "ui/app_list"
+    ],
+    "module_directory_name": "module",
+    "experimental_mode": false,
+    "learning_mode": false,
+    "unfreezed": true,
+    "use_cubit": false
+}

@@ -315,7 +315,10 @@ class FdDashbordView extends StatefulWidget {
                 physics: ScrollPhysics(),
                 itemBuilder: (BuildContext context, int index) {
                   var item = controller.products[index];
-                  return Container(
+                  return InkWell(
+                    onTap: () => Get.to(FdDetailView(
+                      item: item,
+                    )),
                     child: Column(
                       children: [
                         Expanded(

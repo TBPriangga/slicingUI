@@ -20,7 +20,7 @@ class FdDetailView extends StatefulWidget {
         backgroundColor: Colors.transparent,
         elevation: 0.0,
         leading: BackButton(
-          color: Colors.white,
+          color: Colors.black,
         ),
         actions: [
           Padding(
@@ -28,7 +28,7 @@ class FdDetailView extends StatefulWidget {
             child: const Icon(
               Icons.favorite_outline,
               size: 24.0,
-              color: Colors.white,
+              color: Colors.red,
             ),
           ),
         ],
@@ -40,7 +40,7 @@ class FdDetailView extends StatefulWidget {
               height: MediaQuery.of(context).size.height * 0.5,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: NetworkImage(
+                  image: AssetImage(
                     item["photo"],
                   ),
                   fit: BoxFit.cover,

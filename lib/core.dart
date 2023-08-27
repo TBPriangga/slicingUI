@@ -80,5 +80,3 @@ export 'package:hyper_ui/shared/widget/list/list_view.dart';
 export 'package:hyper_ui/shared/widget/typography/heading.dart';
 export 'package:hyper_ui/shared/widget/widget_demo/widget_demo.dart';
 export 'package:hyper_ui/state_util.dart';
-export 'core_package.dart';
-export 'setup.dart';

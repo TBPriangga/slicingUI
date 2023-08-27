@@ -322,7 +322,7 @@ class FdDashbordView extends StatefulWidget {
                     child: Column(
                       children: [
                         Expanded(
-                          child: Image.network(
+                          child: Image.asset(
                             item["photo"],
                             width: 200.0,
                             fit: BoxFit.cover,

@@ -42,8 +42,8 @@ class FdTrackView extends StatefulWidget {
                   child: FlutterMap(
                     options: MapOptions(
                       center: LatLng(
-                        -6.1754234,
-                        106.827224,
+                        -6.222771, // Koordinat Jalan Pintu Satu Senayan
+                        106.803662, // Koordinat Jalan Pintu Satu Senayan
                       ),
                       zoom: 16,
                       interactiveFlags:
@@ -57,7 +57,22 @@ class FdTrackView extends StatefulWidget {
                             'dev.fleaflet.flutter_map.example',
                       ),
                       MarkerLayer(
-                        markers: allMarkers,
+                        markers: [
+                          Marker(
+                            width: 80.0,
+                            height: 80.0,
+                            point: LatLng(
+                              -6.222771, // Koordinat Jalan Pintu Satu Senayan
+                              106.803662, // Koordinat Jalan Pintu Satu Senayan
+                            ),
+                            builder: (ctx) => Container(
+                              child: Icon(
+                                Icons.location_pin,
+                                color: Colors.red,
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ],
                   ),
@@ -87,7 +102,7 @@ class FdTrackView extends StatefulWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            "Greesel",
+                            "Greesel Adhalia",
                             style: TextStyle(
                               fontSize: 16.0,
                               fontWeight: FontWeight.bold,
@@ -133,7 +148,7 @@ class FdTrackView extends StatefulWidget {
                 Row(
                   children: [
                     CircleAvatar(
-                      backgroundColor: Colors.white,
+                      backgroundColor: Color(0xffe2d2c7),
                       child: Icon(
                         MdiIcons.circleMedium,
                         color: Color(0xffff4e01),
@@ -171,7 +186,7 @@ class FdTrackView extends StatefulWidget {
                           height: 6.0,
                         ),
                         Text(
-                          "FX Sudirman",
+                          "Jl.Jend Sudirman Pintu Satu Senayan",
                           style: TextStyle(
                             fontSize: 14.0,
                           ),
@@ -184,6 +199,26 @@ class FdTrackView extends StatefulWidget {
             ),
           ),
         ],
+      ),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Row(
+          children: [
+            Expanded(
+              child: Container(
+                height: 42,
+                width: MediaQuery.of(context).size.width * 0.6,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Color(0xffff4e01),
+                  ),
+                  onPressed: () => Get.to(FdTrackView()),
+                  child: const Text("Order Received"),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
